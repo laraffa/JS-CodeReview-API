@@ -7,7 +7,7 @@
   ],
   "license": "ISC",
   "moduleType": [],
-  "homepage": "",
+  "homepage": "https://github.com/laraffa/JS-CodeReview-API",
   "ignore": [
     "**/.*",
     "node_modules",
