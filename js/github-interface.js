@@ -1,28 +1,16 @@
+
+var getUserInfo = require('./../js/github.js').getUserInfo;
+var getRepos = require('./../js/github.js').getRepos;
 var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function() {
-
-  $('#githubInfo').click(function() {
-    var github = $('#userName').val();
-    $('#userName').val("");
-      $.get('https://api.github.com/users/' + github + '?access_token=' + apiKey).then(function(response){
-      console.log(response);
-      $('.showUserInfo').append('<a href="' + response.html_url + '">' + response.name + '</a>' + " " + response.location + '<br>' + '<img src="' + response.avatar_url + '">');
-    }).fail(function(error){
-      console.log(error.responseJSON.message);
-    });
-  });
+  $(".showUserInfo").hide();
+  $('#userName').click(function(event){
+    event.preventDefault();
+    $(".showUserInfo").show();
+    $('ul.repoList').empty();
+    $('.showUserInfo').empty();
+    var UserRepo = getUserInfo();
+    var newRepo = getRepos();
+  })
 });
-
-
-exports.getRepos = function(){
-  var github = $('#userName').val();
-  $.get('https://api.github.com/users/'+ github + '/repos?access_token=' + apiKey + '&per_page=1000&sort=update').then(function(response){
-    for (var i = 0; i < response.length; i++) {
-      $('ul.resultsList').append('<ul class="resultsItem"><li>' + '<span class="fullName">' + response[i].full_name + '</span></li>' + '<li>' + response[i].description + '</li>' + '<li><a class="button" target="_blank" href="' + response[i].html_url + '">View Repo</a></li></ul>');
-      console.log()
-    }
-  }).fail(function(error){
-console.log(error.responseJSON.message);
-});
-};
