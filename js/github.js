@@ -1,11 +1,9 @@
 var apiKey = require('./../.env').apiKey;
 
-// $(document).ready(function() {
-// $('#githubInfo').click(function() {
+
 
   exports.getUserInfo = function(){
     var github = $('#userName').val();
-    // $('#userName').val("");
       $.get('https://api.github.com/users/' + github + '?access_token=' + apiKey).then(function(response){
       console.log(response);
       $('.showUserInfo').append('<a href="' + response.html_url + '">' + response.name + '</a>' + " " + response.location + '<br>' + '<img src="' + response.avatar_url + '">');
@@ -26,4 +24,3 @@ var apiKey = require('./../.env').apiKey;
     console.log(error.responseJSON.message);
   });
 };
-// getRepos();

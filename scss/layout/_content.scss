@@ -1,6 +1,6 @@
 .container-fluid {
   margin: 0 auto;
-  text-align: center;
+  // text-align: center;
 }
 
 .showUserInfo img {
@@ -11,4 +11,13 @@
 
 .showUserInfo {
   margin-top: 40px;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1 {
+  color: rgb(0,18,98);
 }
