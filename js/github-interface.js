@@ -7,10 +7,10 @@ $(document).ready(function() {
   $(".showUserInfo").hide();
   $('#userName').click(function(event){
     event.preventDefault();
-    $(".showUserInfo").show();
-    $('ul.repoList').empty();
-    $('.showUserInfo').empty();
-    var UserRepo = getUserInfo();
-    var newRepo = getRepos();
+    // $(".showUserInfo").show();
+    // $('ul.repoList').empty();
+    // $('.showUserInfo').empty();
+    // var newUserRepo = new getUserInfo();
+    // var newRepo = new getRepos();
   })
 });
