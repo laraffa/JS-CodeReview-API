@@ -5,7 +5,7 @@ var apiKey = require('./../.env').apiKey;
 
 $(document).ready(function() {
   $(".showUserInfo").hide();
-  $('#userName').click(function(event){
+  $('#githubInfo').click(function(event){
     event.preventDefault();
     $(".showUserInfo").show();
     $('ul.repoList').empty();
