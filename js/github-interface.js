@@ -10,7 +10,7 @@ $(document).ready(function() {
     $(".showUserInfo").show();
     $('ul.repoList').empty();
     $('.showUserInfo').empty();
-    var newUserRepo = new getUserInfo();
-    var newRepo = new getRepos();
+    var newUserRepo = getUserInfo();
+    var newRepo = getRepos();
   })
 });

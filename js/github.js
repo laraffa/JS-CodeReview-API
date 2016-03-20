@@ -18,7 +18,7 @@ var apiKey = require('./../.env').apiKey;
       $.get('https://api.github.com/users/' + github + '/repos?access_token=' + apiKey + '&per_page=1000&sort=update').then(function(response){
         console.log('This is the response for repo ' + response);
         for (var i = 0; i < response.length; i++) {
-          $('ul.repoList').append('<ul class="resultsItem"><li>' + '<span class="fullName">' + response[i].full_name + '</span></li>' + '<li>' + response[i].description + '</li>' + '<li><a class="button" target="_blank" href="' + response[i].html_url + '">View Repo</a></li></ul>');
+          $('ul.repoList').append('<ul class="resultsItem"><li>' + '<span class="fullName">' + response[i].full_name + '</span></li>' + '<li class="describe">' + response[i].description + '</li>' + '<li><a class="button" target="_blank" href="' + response[i].html_url + '">View Repo</a></li></ul>');
         }
       }).fail(function(error){
     console.log(error.responseJSON.message);

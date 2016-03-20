@@ -1,19 +1,46 @@
 .container-fluid {
   margin: 0 auto;
-  // text-align: center;
+  text-align: center;
 }
 
 .showUserInfo img {
   width: 200px;
   height: 200px;
-  padding-top: 20px;
+  border: solid 2px black;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .showUserInfo {
   margin-top: 40px;
+  border: solid 2px black;
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: rgba(0,18,98,0.3);
 }
 
 ul {
   list-style: none;
   text-decoration: none;
+  padding: 0;
+}
+
+h1 {
+  color: #001262;
+}
+
+.fullName {
+  font-weight: bold;
+
+}
+
+.userUser {
+  background-color: red;
+}
+
+.describe {
+  font-style: italic;
 }
