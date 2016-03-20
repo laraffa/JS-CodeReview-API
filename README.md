@@ -10,11 +10,11 @@ This app allows you to enter a GitHub username into a form and it outputs that u
 
 ## Setup/Installation Requirements
 
-*Clone this repository.
-*Run the following commands in terminal:
--npm install
--bower install
--gulp
+* Clone this repository.
+* Run the following commands in terminal:
+  * npm install
+  * bower install
+  * gulp
 
 
 ## Known Bugs
@@ -27,7 +27,7 @@ Contact creator for information and questions: lindsey.raffa@gmail.com.
 
 ## Technologies Used
 
-*Javascript, Node, NPM, Bower, jQuery SASS, Bootstrap
+Javascript, Node, NPM, Bower, jQuery SASS, Bootstrap
 
 ### License
 
